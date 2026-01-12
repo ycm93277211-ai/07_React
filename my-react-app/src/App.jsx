@@ -9,6 +9,7 @@ import Exam4 from './components/Exam4.jsx';
 import Exam5 from './components/Exam5.jsx';
 import Exam6 from './components/Exam6.jsx';
 import Exam7 from './components/Exam7.jsx';
+import Test from './components/Test.jsx';
 import TodoList from './components/TodoList.jsx';
 
 function App() {
@@ -30,8 +31,8 @@ function App() {
       false면  Exam1 렌더링되지 않음
     */}
     
-      <Exam7 />
-
+      <Exam5 />
+      {/* <Test /> */}
       {/* <TodoList /> */}
     </>
 

@@ -27,7 +27,7 @@ const Exam4 = () => {
         {/* 자식이 가진 id,pw 라는 상태값을 부모 컴포넌트가 알 방법이 없음
             -> 부모 컴포넌트로 자식의 상태, 함수를 끌어올려 사용
         */}
-        <button disabled={id.length === 0 || Pw.length === 0}>Login</button>
+        <button disabled={id.length === 0 || pw.length === 0}>Login</button>
       </div>
     </div>
   );

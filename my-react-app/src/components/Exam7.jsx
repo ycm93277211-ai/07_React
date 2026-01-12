@@ -1,4 +1,4 @@
-// SpringBoot 서버로, Reac 클라이언트와 서로 요청/응답 주고받는 예제
+// SpringBoot 서버로, React 클라이언트와 서로 요청/응답 주고받는 예제
 // React는 POST방식으로 보냄
 import { useState} from "react" 
 

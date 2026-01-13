@@ -31,12 +31,12 @@ const Test =()=>{
 }
 
 // 자식
-const Test1 =(prop)=>{
+const Test1 =(props)=>{
     return(
         <>
-        <button onClick={prop.plusScore}>증가버튼</button>
+        <button onClick={props.plusScore}>증가버튼</button>
         
-        <button onClick={prop.minusScore}>감소버튼</button>
+        <button onClick={props.minusScore}>감소버튼</button>
         </>
     
     )

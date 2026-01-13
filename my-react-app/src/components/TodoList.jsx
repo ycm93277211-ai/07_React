@@ -64,15 +64,17 @@ const TodoList =()=>{
 
         {/* 기억하기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
             <ul>
-                {/* 여러줄 일 때 */}
+                {/* 여러줄 일 때 {}중괄호 사용 시 retrun 구문 반드시 필요!!!!!!*/}
                 {/* {todoList.map((todo,index)=>{
                     return(
                         <></>
                     )
                 })} */}
 
+                {/*() 소괄화 이용 시 return 필요 없음 암시적으로 반환할꺼야가 들어있음  */}
+
                 {/* 한줄일때 */}
-                {/* {todoList.map((todo,index)=>{})}  */}
+                {/* {todoList.map((todo,index)=>())}  */}
 
                 {/* 여러줄 일 때 / 한줄일때 */}
                 {todoList.map((todo,index)=>(
@@ -80,9 +82,14 @@ const TodoList =()=>{
                         <span style={{textDecoration : todo.isDone ? "line-through" : "none" }}>{todo.title} </span>
                         <button onClick={()=>handleToggleTodo(index)}>{todo.isDone ?'미완료' : '완료'}</button>
                         <button onClick={()=>handleDeleteTodo(index)}>삭제</button>
-                    </li>
+                        {/* ()=>handleDeleteTodo(index) 왜 handleDeleteTodo(index) 이렇게 안 쓸까?
+                            전달해줄 인자가 있으면  버튼을 누르기 전에 실행이 되어버림 
+                            그래서 화살표 함수 ()=> 이걸 사용하면 클릭 시에만 가능 하게 만들어줌 
 
-                    
+                            인자가 없을 때: onClick={handleDeleteTodo} (함수 이름만 써도 OK)
+                            인자가 있을 때: onClick={() => handleDeleteTodo(index)} (화살표 함수 필수!)
+                        */}
+                    </li> 
                 ))}
             </ul>
         </div>

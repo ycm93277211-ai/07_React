@@ -37,7 +37,7 @@ const Exam5_4=()=>{
 }
 
 // JSX 예제 5 : 배열을 이용한 화면 렌더리 방법(중요함!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
-// 클라이언트(React) <-> 서버(SPringBoot)
+// 클라이언트(React) <-> 서버(SpringBoot)
 // 서버에서 응답받은 데이터는 대부분 배열(List) 형태
 const Exam5_5 = ()=>{
     // 서버에서 아래 배열을 응답받았다고 가정
@@ -46,7 +46,7 @@ const Exam5_5 = ()=>{
     // JS 내장 함수 중 배열의 요소에 하나씩 순차 접근해서 콜백함수 내에 있는 내용 수행 후
     // 새로운 배열을 만들어 반환 -> map(알맹이,번호)
     const listItem = members.map((member,index)=> <li key={index}>{member}</li>); // 시험에 나옴!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // 여러줄일 때 return () 안에 쓰기 하나만 쓸때는 생략 가능
+    // 여러줄일 때 () 안에 쓰기 하나만 쓸때는 생략 가능
     
     // Each chil in a list should have a unique "key" prop
     // -> React 에서 동적으로 list를 렌더링 할 때
